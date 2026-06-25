@@ -15,9 +15,18 @@
 
     body {
       font-family: system-ui, sans-serif;
-      background: #0d0d0d;
+      background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #111827);
+      background-size: 200% 200%;
+      animation: bgMove 12s ease infinite;
       color: #ffffff;
-      min-height: 100vh;
+      height: 100vh;
+      overflow-x: hidden;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     /* HEADER */
@@ -27,18 +36,23 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #0d0d0d;
-      border-bottom: 1px solid #222;
-      position: sticky;
+      background: transparent;
+      position: fixed;
       top: 0;
       z-index: 10;
     }
 
-    .logo {
+    .logo a {
       font-size: 1.2rem;
       font-weight: 600;
       letter-spacing: 0.5px;
       color: #ffffff;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .logo a:hover {
+      opacity: 0.7;
     }
 
     nav {
@@ -57,20 +71,35 @@
       color: #ffffff;
     }
 
-    /* PAGE CONTENT (placeholder) */
+    /* CENTERED CONTENT */
     .content {
-      padding: 80px 40px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      animation: fadeUp 1.2s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .content h1 {
-      font-size: 2.4rem;
+      font-size: 3rem;
       margin-bottom: 10px;
+      font-weight: 700;
     }
 
     .content p {
-      opacity: 0.7;
-      font-size: 1.1rem;
+      opacity: 0.8;
+      font-size: 1.2rem;
     }
   </style>
 </head>
@@ -78,7 +107,9 @@
 <body>
 
   <header>
-    <div class="logo">pausuu.xyz</div>
+    <div class="logo">
+      <a href="https://pausuu.xyz">pausuu.xyz</a>
+    </div>
 
     <nav>
       <a href="https://pausuu.xyz">Home</a>
@@ -90,8 +121,8 @@
   </header>
 
   <div class="content">
-    <h1>Welcome</h1>
-    <p>This is your starter page. Tell me your style and I’ll build the full site.</p>
+    <h1>pausuu</h1>
+    <p>video editor and content creator</p>
   </div>
 
 </body>
