@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pausuu</title>
 
+  <style>
+    /* RESET */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      background: #0d0d0d;
+      color: #ffffff;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    header {
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0d0d0d;
+      border-bottom: 1px solid #222;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
+      color: #bbbbbb;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    /* PAGE CONTENT (placeholder) */
+    .content {
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .content h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      opacity: 0.7;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">pausuu.xyz</div>
+
+    <nav>
+      <a href="https://pausuu.xyz">Home</a>
+      <a href="https://editing.pausuu.xyz">Editing</a>
+      <a href="https://pausuu.xyz/contact">Contact</a>
+      <a href="https://pausuu.xyz/links">Links</a>
+      <a href="https://projects.pausuu.xyz">Projects</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <h1>Welcome</h1>
+    <p>This is your starter page. Tell me your style and I’ll build the full site.</p>
+  </div>
+
+</body>
+</html>
