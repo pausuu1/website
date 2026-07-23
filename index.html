@@ -1,129 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pausuu</title>
-
-  <style>
-    /* RESET */
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: system-ui, sans-serif;
-      background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #111827);
-      background-size: 200% 200%;
-      animation: bgMove 12s ease infinite;
-      color: #ffffff;
-      height: 100vh;
-      overflow-x: hidden;
-    }
-
-    @keyframes bgMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* HEADER */
-    header {
-      width: 100%;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: transparent;
-      position: fixed;
-      top: 0;
-      z-index: 10;
-    }
-
-    .logo a {
-      font-size: 1.2rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      color: #ffffff;
-      text-decoration: none;
-      transition: 0.2s ease;
-    }
-
-    .logo a:hover {
-      opacity: 0.7;
-    }
-
-    nav {
-      display: flex;
-      gap: 24px;
-    }
-
-    nav a {
-      color: #bbbbbb;
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: 0.2s ease;
-    }
-
-    nav a:hover {
-      color: #ffffff;
-    }
-
-    /* CENTERED CONTENT */
-    .content {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      animation: fadeUp 1.2s ease forwards;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .content h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-
-    .content p {
-      opacity: 0.8;
-      font-size: 1.2rem;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pausuu — Developer & Editor</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-
-  <header>
-    <div class="logo">
-      <a href="https://pausuu.xyz">pausuu.xyz</a>
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="title">Pausuu</h1>
+      <p class="subtitle">Developer • Editor • Digital Creator</p>
+      <a href="#projects" class="cta">View My Work</a>
     </div>
-
-    <nav>
-      <a href="https://pausuu.xyz">Home</a>
-      <a href="https://editing.pausuu.xyz">Editing</a>
-      <a href="https://pausuu.xyz/contact">Contact</a>
-      <a href="https://pausuu.xyz/links">Links</a>
-      <a href="https://projects.pausuu.xyz">Projects</a>
-    </nav>
   </header>
 
-  <div class="content">
-    <h1>pausuu</h1>
-    <p>video editor and content creator</p>
-  </div>
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a developer and digital editor focused on clean design, smooth user experiences,
+      and efficient systems. I build Discord bots, Minecraft plugins, websites, and
+      polished visual content. I love solving problems and creating aesthetic, functional tools.
+    </p>
+  </section>
 
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>PausuuBot</h3>
+        <p>A multi‑purpose Discord bot built for speed, reliability, and clean UX.</p>
+        <a href="#" class="link">View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>Minecraft SMP Setup</h3>
+        <p>Custom Folia/Paper server configuration, tunneling, worldgen, and plugin design.</p>
+        <a href="#" class="link">View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>Website Designs</h3>
+        <p>Clean, minimal, animation‑focused UI/UX builds using HTML/CSS/JS.</p>
+        <a href="#" class="link">View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>Editing Portfolio</h3>
+        <p>Visual edits, thumbnails, SMP‑style logos, and digital branding assets.</p>
+        <a href="#" class="link">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <h2>Contact</h2>
+    <p>Discord: <strong>pausuu</strong></p>
+    <p>Email: <strong>pausuubusiness@gmail.com</strong></p>
+    <p>Twitter: <strong>@pausuuofficial</strong></p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
